@@ -1,0 +1,35 @@
+{
+  "title": "Gatsby French",
+  "description": "Starten Sie Ihr nächstes, tolles Gatsby-Projekt mit diesem default-starter-intl. Dieser Barebones-Starter wird mit den wichtigsten Gatsby-Konfigurationsdateien geliefert, die Sie möglicherweise benötigen.",
+  "author": "@wiziple",
+  "hello": "hallo Leute",
+  "welcome": "Willkommen auf Ihrer neuen Gatsby-Site.",
+  "title_page2": "Seite zwei",
+  "hello_page2": "Hallo von der zweiten Seite",
+  "go_page2": "Gehen Sie zu Seite 2",
+  "build": "Jetzt mach etwas Großartiges.",
+  "welcome_page2": "Willkommen auf Seite 2",
+  "go_back": "Gehe zurück zur Startseite",
+  "notfound": {
+    "header": "Nicht gefunden",
+    "description": "Sie haben gerade eine Route erreicht, die nicht existiert... die Traurigkeit."
+  },
+  "home": {
+    "title": "I am in French",
+    "h1": "La solution sécurisée tout-en-un pour les évaluations en ligne",
+    "bannerBody": "Découvrez le logiciel leader pour créer des examens en ligne et en face-à-face préféré par équipes éducatives et entreprises axées sur l'excellence.",
+    "demo": "Découvrir la démo !",
+    "title_feat1": "Moderniser les stratégies d'évaluation",
+    "body_feat1": "Allégez et simplifiez les processus d'examen grâce à notre système qui vous permet de gérer les tests numérisés et d'externaliser leur correction en quelques clics.",
+    "title_feat2": "Profitez d'un système 100% intuitif",
+    "body_feat2": "Le créateur de test de TestWe se distingue par sa facilité d'utilisation, à la fois pour les enseignants et les étudiants qui peuvent utiliser des instructions claires.",
+    "title_feat3": "Diminue le risque de fraude",
+    "body_feat3": "Découvrez les fonctionnalités uniques de Testwe pour effectuer des examens en face à face et à distance via l'ordinateur avec un haut niveau de fiabilité.",
+    "title_feat4": "Accélère la création de différents types d'examen",
+    "body_feat4": "Merci à la plate-forme pour des sondages en ligne, vous pouvez profiter de la polyvalence des outils numériques pour les examens formative ou sommative.",
+    "title_feat5": "Suivez la courbe d'apprentissage des élèves",
+    "body_feat5": "Faites usage de la puissance de notre outil d'analyse des données sur la performance de vos élèves afin d'optimiser vos stratégies sur le programme.",
+    "title_feat6": "Confidentialité et sécurité",
+    "body_feat6": "Nous adaptons et parfait notre technologie selon les mesures de RGPD pour assurer la confidentialité des données saisies dans nos bases."
+  }
+}
