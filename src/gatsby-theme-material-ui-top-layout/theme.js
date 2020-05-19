@@ -4,20 +4,26 @@ import { createMuiTheme, colors, responsiveFontSizes } from '@material-ui/core'
 const myTheme = createMuiTheme({
   palette: {
     primary: {
-      main: `#ffffff`,
+      main: `#6E357E`,
+      mainGradient: 'linear-gradient(333.26deg, #D82644 2.15%, #6E357E 85.74%)',
     },
     secondary: {
-      main: `#19857b`,
+      main: `#D82644`,
     },
-    error: {
-      main: colors.red.A400,
-    },
-    background: {
-      default: `#fff`,
-    },
+    // error: {
+    //   main: colors.red.A400,
+    // },
+    // background: {
+    //   default: `#fff`,
+    // },
     text: {
-      secondary: `#fff`,
+      // primary: `#fff`,
+      secondary: `rgba(255, 255, 255, 0.7)`,
+      //   disabled: `rgba(255, 255, 255, 0.5)`,
+      //   hint: `rgba(255, 255, 255, 0.5)`,
+      //   icon: `rgba(255, 255, 255, 0.5)`,
     },
+    // divider: `rgba(255, 255, 255, 0.12)`,
   },
   typography: {
     fontFamily: ['Montserrat', 'sans-serif'].join(','),
@@ -51,6 +57,14 @@ const myTheme = createMuiTheme({
     },
     body1: {
       fontSize: '0.9em',
+    },
+  },
+  overrides: {
+    MuiPaper: {
+      root: {
+        background: 'linear-gradient(333.26deg, #D82644 2.15%, #6E357E 85.74%)',
+        color: '#fff',
+      },
     },
   },
 })
