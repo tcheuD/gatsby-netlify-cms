@@ -20,15 +20,15 @@ import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
-import { Link } from 'gatsby'
+import { Link } from 'gatsby-plugin-intl'
 import Typography from '@material-ui/core/Typography'
 
 const MyLink = styled(Link)`
-  color: rgb(87, 86, 86);
+  color: white;
   text-decoration: none;
   margin-right: 2rem;
   border: 2px solid ${props => (props.demo ? '#e64663' : 'transparent')};
-  border-radius: 200px 200px / 200px 200px;
+  border-radius: 30px;
   padding: ${props => (props.demo ? '0px 15px 0px 15px' : '0px')};
   cursor: pointer;
   transition: all 20ms ease-in;
@@ -64,7 +64,7 @@ export default function Header(props) {
     query {
       testWeLogo: file(relativePath: { eq: "tw_logo.png" }) {
         childImageSharp {
-          fluid(maxWidth: 50, pngQuality: 100) {
+          fluid {
             ...GatsbyImageSharpFluid
           }
         }
@@ -117,7 +117,7 @@ export default function Header(props) {
             <Grid item xs style={{ display: matches ? 'none' : 'block' }}>
               <Grid container justify="flex-end" className={classes.title}>
                 <MyLink to="#">
-                  <NavTypography variant="body2">How it works</NavTypography>
+                  <NavTypography variant="body1">Software</NavTypography>
                 </MyLink>
                 <MyLink
                   to="#"
@@ -129,7 +129,7 @@ export default function Header(props) {
                   // onMouseOver={handleClick}
                   onMouseLeave={handleToggle}
                 >
-                  <NavTypography variant="body2">Ressources</NavTypography>
+                  <NavTypography variant="body1">Why?</NavTypography>
                 </MyLink>
                 <Popper
                   open={open}
@@ -166,17 +166,20 @@ export default function Header(props) {
                     </Grow>
                   )}
                 </Popper>
-                <MyLink to="#">
-                  <NavTypography variant="body2">About us</NavTypography>
-                </MyLink>
-                <MyLink demo to="demo">
-                  <NavTypography variant="body2">Demo</NavTypography>
+                <MyLink activeStyle={{ color: 'white' }} to="#">
+                  <NavTypography variant="body1">For who?</NavTypography>
                 </MyLink>
                 <MyLink to="#">
-                  <NavTypography variant="body2">Language</NavTypography>
+                  <NavTypography variant="body1">Blog</NavTypography>
+                </MyLink>
+                <MyLink to="#">
+                  <NavTypography variant="body1">Support</NavTypography>
+                </MyLink>
+                <MyLink demo to="/demo">
+                  <NavTypography variant="body1">Demo</NavTypography>
                 </MyLink>
                 <MyLink to="https://app.testwe.eu/en/login">
-                  <NavTypography variant="body2">Log in</NavTypography>
+                  <NavTypography variant="body1">Log in</NavTypography>
                 </MyLink>
               </Grid>
             </Grid>
