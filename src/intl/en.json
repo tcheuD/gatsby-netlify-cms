@@ -16,5 +16,18 @@
   },
   "home": {
     "title": "Hey I am in English"
+  },
+  "terms-conditions": {
+    "title": "Terms and Privacy",
+    "terms": "Terms and Privacy regarding TestWe Website",
+    "terms-body": "You are connected on the Internet website www.testwe.eu (hereinafter the \"Website\") edited by TestWe SAS - share capital of € 14,891 - registered at the RCS Paris under number 801 731 571 which registered office is situated 40 rue Desaix, 75015, Paris, France (hereinafter 'TestWe'). In accordance with the French Data Protection Regulation (loi Informatique et Libertés, n° 78-17 of 6 January 1978), the Website has regularly been declared to the CNIL (declaration receipt no. 1799783). VAT identification of TestWe is FR 88801731571. The publishing director is Mr. Charles ZHU as the legal representative of the company. By connecting to this Website any Internet user or customer unconditionally and unreservedly accepts these Terms and Privacy in full.",
+    "intellectual": "Intellectual property",
+    "intellectual-body": "TestWe is entitled to all the rights covering brands, distinctive signs, domain name, software used within the framework of the website operation. Any partial or total representation or reproduction of the brands, distinctive signs, domain name, software and/or every other element published on the Website is forbidden and may constitute an infringement engaging civil or criminal responsibility. TestWe will not in any event have any liability for the content or products and services offered on the websites to which the Website is linked by either hypertext links or any other type of link. The prior written authorisation of TestWe is necessary for the creation of any hypertext link to the Website.",
+    "confidentiality": "Confidentiality and protection of private life",
+    "confidentiality-body": "You are not required to disclose your identity or any other personal data in order to consult the Website. No personal information is collected without your knowledge. Data which is indispensable for TestWe are marked by an asterisk on the Website pages. Other optional data are requested for the purpose of better understanding your needs and improving our service offer. The data collected is processed electronically. It is your responsibility to verify that the information you provide to us through the Site is accurate and complete. The information collected is intended exclusively for TestWe, which is hereby authorized, unless you object for legitimate reasons, to store and use it to inform you about its products and services.\nYou have the right to access, change, correct or remove your personal data in accordance with French Regulation. You may exercise this right by writing to us at:\nTestWe\n« Data protection »\n7 rue Notre-Dame de Nazareth\n75003 Paris, France\nOR\ncontact@testwe.eu",
+    "applicable": "Applicable law and jurisdiction",
+    "applicable-body": "The Website and these Terms and Privacy are regulated by French law. In all matters of opinion or interpretation of information, the original language version in French takes precedence over the translation. Any dispute arising in connection with the interpretation or performance of these Terms and Privacy will be referred to the exclusive jurisdiction of the Paris courts, subject however to any contrary mandatory provisions.",
+    "modifications": "Modifications",
+    "modifications-body": "TestWe reserves the right to change or update these Terms and Privacy without notice, together with the right to change the content, products or services described on the Website. Any such change will be binding on users, who are required to consult the Terms and Privacy applicable to the Website."
   }
 }
