@@ -3,7 +3,12 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useIntl } from 'gatsby-plugin-intl'
 import { Layout, SEO } from '../components'
-import { Header, Applications, Features } from '../components/Home'
+import {
+  BannerFirst,
+  BannerSecond,
+  Applications,
+  Features,
+} from '../components/Home'
 
 import styled from 'styled-components'
 
@@ -66,8 +71,8 @@ const IndexPage = () => {
         </Svg>
         TEST
       </Header> */}
-      <Header />
-      <Features />
+      <BannerFirst />
+      <BannerSecond />
       <Applications />
     </Layout>
   )
