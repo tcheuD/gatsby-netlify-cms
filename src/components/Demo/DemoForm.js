@@ -1,5 +1,5 @@
 import React, { useReducer, useState } from 'react'
-import { TextField, Grid, Typography } from '@material-ui/core'
+import { TextField, Grid, Typography, Checkbox } from '@material-ui/core'
 import { WhiteLink } from '../../elements'
 import styled from 'styled-components'
 
@@ -40,6 +40,11 @@ const DemoForm = () => {
   const handleSubmit = event => {
     event.preventDefault()
     alert(`Welcome ${state.firstName} ${state.lastName}!`)
+  }
+  const [checked, setChecked] = React.useState(true)
+
+  const handleCheck = event => {
+    setChecked(event.target.checked)
   }
 
   return (
@@ -125,11 +130,10 @@ const DemoForm = () => {
           />
         </Grid>
         <Grid container item xs={12} justify="center">
-          <WhiteLink onClick={handleSubmit}>Get my appointment!</WhiteLink>
+          <WhiteLink onClick={handleSubmit}>Get my appointment! </WhiteLink>
         </Grid>
       </Grid>
     </form>
   )
 }
-
 export default DemoForm
