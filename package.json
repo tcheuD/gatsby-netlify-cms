@@ -6,7 +6,7 @@
   "author": "Dominic Abela <djmabela@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.9.12",
-    "@material-ui/icons": "^4.2.0",
+    "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.0.1",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.21.4",
@@ -19,6 +19,7 @@
     "gatsby-plugin-material-ui": "^2.0.1",
     "gatsby-plugin-offline": "^2.1.1",
     "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.3.0",
     "gatsby-plugin-sharp": "^2.1.2",
     "gatsby-plugin-styled-components": "^3.2.4",
