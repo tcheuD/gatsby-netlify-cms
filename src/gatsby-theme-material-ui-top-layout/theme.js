@@ -29,11 +29,11 @@ const myTheme = createMuiTheme({
     fontFamily: ['Montserrat', 'sans-serif'].join(','),
     fontSize: 16,
     h1: {
-      fontSize: '3em',
+      fontSize: '1.875em',
       fontWeight: 'bolder',
     },
     h2: {
-      fontSize: '1.7em',
+      fontSize: '1.875em',
       fontWeight: 'bolder',
     },
     h3: {
@@ -53,7 +53,7 @@ const myTheme = createMuiTheme({
       fontWeight: 'bolder',
     },
     subtitle1: {
-      fontSize: '1.2em',
+      fontSize: '1em',
     },
     body1: {
       fontSize: '0.9em',
