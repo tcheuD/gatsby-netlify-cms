@@ -3,39 +3,27 @@ import { Link } from 'gatsby-plugin-intl'
 
 const PinkLink = styled(Link)`
   text-decoration: none;
-  background-color: #ffffff;
   padding: 5px 10px;
   margin: 10px;
-  font-size: 16px;
+
+  border: 2px solid #e64663;
+  box-sizing: border-box;
+  border-radius: 15px;
   color: #e64663;
-  border: 2px solid transparent;
-  border-radius: 80px;
-  background-image: linear-gradient(white, white),
-    radial-gradient(circle at 100%, #6e357e 0%, #d82644 100%);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  transition: all 10ms ease-in;
+  background-color: 'transparent';
+
+  width: fit-content(20em);
+  white-space: nowrap;
+  left: 503px;
+  top: 404px;
+
+  font-family: Montserrat;
+  font-weight: 600;
+  line-height: 20px;
+
   :hover {
-    background-image: linear-gradient(to right, #6e357e, #d82644 100%);
     background-color: #e64663;
     color: white;
-
-    p {
-      color: white;
-      background-image: linear-gradient(to right, #6e357e, #d82644 100%);
-      -webkit-text-fill-color: white;
-      -moz-text-fill-color: white;
-    }
-  }
-
-  & p {
-    background-image: radial-gradient(circle at 100%, #6e357e 0%, #d82644 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    background-color: #f3ec78;
   }
 `
 
