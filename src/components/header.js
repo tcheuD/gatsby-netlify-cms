@@ -2,26 +2,23 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { makeStyles } from '@material-ui/core/styles'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
-import Grid from '@material-ui/core/Grid'
-import MenuItem from '@material-ui/core/MenuItem'
-import { useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-
-import Grow from '@material-ui/core/Grow'
-import Paper from '@material-ui/core/Paper'
-import Popper from '@material-ui/core/Popper'
-import MenuList from '@material-ui/core/MenuList'
-import ClickAwayListener from '@material-ui/core/ClickAwayListener'
 
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby-plugin-intl'
-import Typography from '@material-ui/core/Typography'
+import {
+  Typography,
+  MenuItem,
+  Menu,
+  IconButton,
+  AppBar,
+  Toolbar,
+  makeStyles,
+  useTheme,
+  Grid,
+} from '@material-ui/core'
 
 const MyLink = styled(Link)`
   color: white;
@@ -71,29 +68,16 @@ export default function Header(props) {
       }
     }
   `)
-  // Dropddown
-  const [open, setOpen] = React.useState(false)
-  const anchorRef = React.useRef(null)
 
-  const handleToggle = () => {
-    setOpen(prevOpen => !prevOpen)
+  const [anchorEl, setAnchorEl] = React.useState(null)
+
+  const handleClick = event => {
+    setAnchorEl(event.currentTarget)
   }
 
-  const handleClose = event => {
-    if (anchorRef.current && anchorRef.current.contains(event.target)) {
-      return
-    }
-
-    setOpen(false)
+  const handleClose = () => {
+    setAnchorEl(null)
   }
-
-  function handleListKeyDown(event) {
-    if (event.key === 'Tab') {
-      event.preventDefault()
-      setOpen(false)
-    }
-  }
-
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -119,56 +103,30 @@ export default function Header(props) {
                 <MyLink to="#">
                   <NavTypography variant="body1">Software</NavTypography>
                 </MyLink>
-                <MyLink
-                  to="#"
-                  ref={anchorRef}
-                  aria-controls={open ? 'menu-list-grow' : undefined}
-                  aria-haspopup="true"
-                  // onClick={handleClick}
-                  onMouseEnter={handleToggle}
-                  // onMouseOver={handleClick}
-                  onMouseLeave={handleToggle}
-                >
+                <MyLink to="#">
                   <NavTypography variant="body1">Why?</NavTypography>
                 </MyLink>
-                <Popper
-                  open={open}
-                  anchorEl={anchorRef.current}
-                  role={undefined}
-                  transition
-                  disablePortal
+                <MyLink
+                  activeStyle={{ color: 'white' }}
+                  to="#"
+                  aria-controls="simple-menu"
+                  aria-haspopup="true"
+                  onClick={handleClick}
                 >
-                  {({ TransitionProps, placement }) => (
-                    <Grow
-                      {...TransitionProps}
-                      style={{
-                        transformOrigin:
-                          placement === 'bottom'
-                            ? 'center top'
-                            : 'center bottom',
-                      }}
-                    >
-                      <Paper>
-                        <ClickAwayListener onClickAway={handleClose}>
-                          <MenuList
-                            autoFocusItem={open}
-                            id="menu-list-grow"
-                            onKeyDown={handleListKeyDown}
-                          >
-                            <MenuItem onClick={handleClose}>Profile</MenuItem>
-                            <MenuItem onClick={handleClose}>
-                              My account
-                            </MenuItem>
-                            <MenuItem onClick={handleClose}>Logout</MenuItem>
-                          </MenuList>
-                        </ClickAwayListener>
-                      </Paper>
-                    </Grow>
-                  )}
-                </Popper>
-                <MyLink activeStyle={{ color: 'white' }} to="#">
                   <NavTypography variant="body1">For who?</NavTypography>
                 </MyLink>
+                <Menu
+                  style={{ marginTop: '3%' }}
+                  id="simple-menu"
+                  anchorEl={anchorEl}
+                  keepMounted
+                  open={Boolean(anchorEl)}
+                  onClose={handleClose}
+                >
+                  <MenuItem onClick={handleClose}>Profile</MenuItem>
+                  <MenuItem onClick={handleClose}>My account</MenuItem>
+                  <MenuItem onClick={handleClose}>Logout</MenuItem>
+                </Menu>
                 <MyLink to="#">
                   <NavTypography variant="body1">Blog</NavTypography>
                 </MyLink>
