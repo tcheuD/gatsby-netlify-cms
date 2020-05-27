@@ -1,5 +1,6 @@
-import Header from './Header'
+import BannerFirst from './BannerFirst'
+import BannerSecond from './BannerSecond'
 import Applications from './Applications'
 import Features from './Features'
 
-export { Header, Applications, Features }
+export { BannerFirst, BannerSecond, Applications, Features }
