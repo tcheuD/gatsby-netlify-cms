@@ -20,7 +20,7 @@ const Feature = props => {
       container
       item
       xs={6}
-      md={4}
+      md={3}
       alignItems="center"
       justify="left"
       direction="column"
@@ -77,25 +77,11 @@ const Features = props => {
       title: intl.formatMessage({ id: 'home.title_feat4' }),
       description: intl.formatMessage({ id: 'home.body_feat4' }),
     },
-    {
-      fluid: data.defaultimage.childImageSharp.fluid,
-      alt: 'test',
-      title: intl.formatMessage({ id: 'home.title_feat5' }),
-      description: intl.formatMessage({ id: 'home.body_feat5' }),
-    },
-    {
-      fluid: data.defaultimage.childImageSharp.fluid,
-      alt: 'test',
-      title: intl.formatMessage({ id: 'home.title_feat6' }),
-      description: intl.formatMessage({ id: 'home.body_feat6' }),
-    },
   ]
 
   return (
     <Grid container spacing={3} alignItems="center">
-      <Grid item xs={12}>
-        <Typography variant="h2">Avantages</Typography>
-      </Grid>
+      <Grid item xs={12}></Grid>
       {features.map(value => {
         return <Feature {...value} />
       })}
