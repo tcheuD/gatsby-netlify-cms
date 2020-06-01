@@ -1,15 +1,17 @@
 import React from 'react'
-import Paper from '@material-ui/core/Paper'
 import { makeStyles } from '@material-ui/core/styles'
-import Tabs from '@material-ui/core/Tabs'
-import Tab from '@material-ui/core/Tab'
-import PhoneIcon from '@material-ui/icons/Phone'
-import FavoriteIcon from '@material-ui/icons/Favorite'
-import PersonPinIcon from '@material-ui/icons/PersonPin'
+import DescriptionIcon from '@material-ui/icons/Description'
 import { Layout, SEO } from '../components'
-import { Grid, Typography } from '@material-ui/core'
+import { Privacy, Students, Teachers } from '../components/Support'
+import { Grid, Typography, Tab, Tabs, Paper } from '@material-ui/core'
 import PropTypes from 'prop-types'
 import { useIntl } from 'gatsby-plugin-intl'
+import styled from 'styled-components'
+import { PrivacyIcon, TeachersIcon } from '../elements/SVGS'
+
+const MyPaper = styled(Paper)`
+  box-shadow: none;
+`
 
 const TabPanel = props => {
   const { children, value, index, ...other } = props
@@ -35,8 +37,7 @@ TabPanel.propTypes = {
 
 const useStyles = makeStyles({
   root: {
-    flexGrow: 1,
-    maxWidth: 500,
+    width: '100%',
   },
 })
 
@@ -51,31 +52,55 @@ export default function Support() {
 
   return (
     <Layout>
-      <Grid container spacing={3} alignItems="center">
+      <Grid container direction="row" justify="flex-start" alignItems="center">
         <Grid item container sm={12}>
-          <Paper square className={classes.root}>
+          <Grid item sm={2}>
+            <Typography variant="h1">Support</Typography>
+          </Grid>
+          <Grid item sm={10}>
+            <Typography variant="body1">Text</Typography>
+          </Grid>
+          <Grid item sm={12}>
+            <Typography> Text </Typography>
+          </Grid>
+          <MyPaper square className={classes.root} elevation={0}>
             <Tabs
               value={value}
               onChange={handleChange}
               variant="fullWidth"
-              indicatorColor="secondary"
+              // indicatorColor="inherit"
               textColor="secondary"
               aria-label="icon label tabs example"
             >
-              <Tab icon={<PhoneIcon />} label="RECENTS" />
-              <Tab icon={<FavoriteIcon />} label="FAVORITES" />
-              <Tab icon={<PersonPinIcon />} label="NEARBY" />
+              <Tab
+                icon={<PrivacyIcon fontSize="large" />}
+                label={intl.formatMessage({
+                  id: 'support.privacy.personal-data',
+                })}
+              />
+              <Tab
+                icon={<TeachersIcon fontSize="large" />}
+                label={intl.formatMessage({
+                  id: 'support.teachers.support',
+                })}
+              />
+              <Tab
+                icon={<DescriptionIcon />}
+                label={intl.formatMessage({
+                  id: 'support.students.support',
+                })}
+              />
             </Tabs>
             <TabPanel value={value} index={0}>
-              Item One
+              <Privacy />
             </TabPanel>
             <TabPanel value={value} index={1}>
-              Item Two
+              <Teachers />
             </TabPanel>
             <TabPanel value={value} index={2}>
-              Item Three
+              <Students />
             </TabPanel>
-          </Paper>
+          </MyPaper>
         </Grid>
       </Grid>
     </Layout>
